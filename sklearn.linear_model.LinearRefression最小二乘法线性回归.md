@@ -49,6 +49,7 @@ print(reg.coef_)
 print(reg.intercept_)
 print(reg.predict(np.array([[3, 5]])))
 
+结果：
 """
 [6 8 9 11]
 [1. 2.]

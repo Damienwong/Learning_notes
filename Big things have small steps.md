@@ -217,3 +217,25 @@ print("Time used:", (datetime.now() - start))
 Time used: 0:00:00.007985
 """
 ```
+
+### ininstance()函数
+isinstance()函数来判断一个对象是否是一个已知的类型
+#### 语法
+```python
+isinstance(object, classinfo)
+```
+#### 参数
+ - object 实例对象
+ - classinfo 可以是直接或间接类名、基本类型或者有它们组成的元组
+#### 返回值
+如果对象的类型与参数二的类型（classinfo）相同则返回True，否则返回False
+```python
+a = 2.3
+r1 = isinstance(a, int)
+r2 = isinstance(a, float)
+r3 = isinstance(a, (str, float, list))
+print(r1, r2, r3)
+"""
+False True True
+"""
+```

@@ -43,7 +43,7 @@ import serial
 而windows安装的确实名为pyserial的库，打包并不会把pyserial打进去，所以需要具体指定该包。
 即
 ```python
-D:\WORK\y21w15>pyinstaller -F test.py
+D:\WORK\y21w15>pyinstaller -F test.py --hidden-import=['pyserial']
 ```
 
 pyinstaller官方文档：

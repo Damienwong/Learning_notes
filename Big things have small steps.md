@@ -235,7 +235,7 @@ r1 = isinstance(a, int)
 r2 = isinstance(a, float)
 r3 = isinstance(a, (str, float, list))
 print(r1, r2, r3)
-"""
+"""d
 False True True
 """
 ```

@@ -239,3 +239,19 @@ print(r1, r2, r3)
 False True True
 """
 ```
+
+### 字符串和字节流的相互转换
+```python
+string1 = 'aabbcc0102ff'
+bits = bytes.fromhex(string1)  # 字符串转化为字节流
+print(type(bits), bits)
+
+string2 = bits.hex()  # 字节流转化为字符串
+print(type(string2), string2)
+
+结果
+"""
+<class 'bytes'> b'\xaa\xbb\xcc\x01\x02\xff'
+<class 'str'> aabbcc0102ff
+"""
+```

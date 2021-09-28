@@ -88,19 +88,35 @@ import struct
 # print(hex(255))
 # print(b'\xff'.hex())
 
-a = 60  # a = 0011 1100
-b = 13  # b = 0000 1101
+# a = 60  # a = 0011 1100
+# b = 13  # b = 0000 1101
+#
+# print('与运算结果：', a & b)
+# print('或运算结果：', a | b)
+# print('取反运算结果：', ~a)  # 对数据的每个二进制位取反，得到一个有符号二进制数的补码形式。 最终结果类似-a-1
+# print('异或运算结果：', a ^ b)  # 当两对应的二进制位相异时，结果为1. 0011 0001 =  49
+# print('左移位运算结果：', a << 2)  # 各二进制位全部左移若干位，高位丢弃，低位补0. 1111 0000
+# print('右移位运算结果：', b >> 2)  # 各二进制位全部右移若干位  0000 0011
+#
+# print(a and b)  # 如果 x 为 False，x and y 返回 False，否则它返回 y 的计算值。
+# print(a or b)  # 如果 x 是非 0，它返回 x 的计算值，否则它返回 y 的计算值。
+# print(not a)  # 如果 x 为 True，返回 False 。如果 x 为 False，它返回 True。
+#
+# print('取余结果：', a % b)
+# print('整除取整：', a // b)
 
-print('与运算结果：', a & b)
-print('或运算结果：', a | b)
-print('取反运算结果：', ~a)  # 对数据的每个二进制位取反，得到一个有符号二进制数的补码形式。 最终结果类似-a-1
-print('异或运算结果：', a ^ b)  # 当两对应的二进制位相异时，结果为1. 0011 0001 =  49
-print('左移位运算结果：', a << 2)  # 各二进制位全部左移若干位，高位丢弃，低位补0. 1111 0000
-print('右移位运算结果：', b >> 2)  # 各二进制位全部右移若干位  0000 0011
+import struct
 
-print(a and b)  # 如果 x 为 False，x and y 返回 False，否则它返回 y 的计算值。
-print(a or b)  # 如果 x 是非 0，它返回 x 的计算值，否则它返回 y 的计算值。
-print(not a)  # 如果 x 为 True，返回 False 。如果 x 为 False，它返回 True。
+input_file = r"D:\WORK\0_QT128相关\QT128_四色板.pcap"
+file_handle = open(input_file, 'rb')
+datas=''
+for j in range(16):
+    for i in range(8):
+        data = file_handle.read(1)
+        data_hex = str(hex(struct.unpack('<B', data)[0]))[2:]
+        if len(data_hex) == 1:
+            data_hex = '0'+data_hex
+        datas += data_hex
+    datas +='\n'
 
-print('取余结果：', a % b)
-print('整除取整：', a // b)
+print(datas)

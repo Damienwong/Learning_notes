@@ -255,3 +255,19 @@ print(type(string2), string2)
 <class 'str'> aabbcc0102ff
 """
 ```
+
+### 获取当前py文件的路径
+```python
+import os
+mpath = os.path.dirname(__file__)  # 返回py目录名称
+apath = os.path.abspath(__file__)  # 返回py绝对路径
+print(mpath)
+print(apath)
+print(type(__file__), __file__)
+
+"""
+D:/Codes/for_trial_only/Data_analyses
+D:\Codes\for_trial_only\Data_analyses\first_100second.py
+<class 'str'> D:/Codes/for_trial_only/Data_analyses/first_100second.py
+"""
+```

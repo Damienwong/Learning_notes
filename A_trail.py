@@ -105,18 +105,56 @@ import struct
 # print('取余结果：', a % b)
 # print('整除取整：', a // b)
 
-import struct
+# import struct
+#
+# input_file = r"D:\WORK\0_QT128相关\QT128_四色板.pcap"
+# file_handle = open(input_file, 'rb')
+# datas=''
+# for j in range(16):
+#     for i in range(8):
+#         data = file_handle.read(1)
+#         data_hex = str(hex(struct.unpack('<B', data)[0]))[2:]
+#         if len(data_hex) == 1:
+#             data_hex = '0'+data_hex
+#         datas += data_hex
+#     datas +='\n'
+#
+# print(datas)
 
-input_file = r"D:\WORK\0_QT128相关\QT128_四色板.pcap"
-file_handle = open(input_file, 'rb')
-datas=''
-for j in range(16):
-    for i in range(8):
-        data = file_handle.read(1)
-        data_hex = str(hex(struct.unpack('<B', data)[0]))[2:]
-        if len(data_hex) == 1:
-            data_hex = '0'+data_hex
-        datas += data_hex
-    datas +='\n'
+# import hashlib
+#
+# m = hashlib.sha256()
+# m.update(b"this is a test")
+# # m.update(b" the spammish repetition")
+# print(m.digest())
+# print(m.digest().hex())
+# print(len(m.digest().hex()))
+#
+#
+# print(m)
 
-print(datas)
+# d = {} # 一个普通的字典
+# d.setdefault('a', []).append(1)
+# d.setdefault('a', []).append(2)
+# d.setdefault('b', []).append(4)
+# print(d)
+
+
+# for i in "python":
+#     if i == "t":
+#         continue
+#     print(i, end="")
+
+# for i in "python":
+#     if i == "t":
+#         break
+#     print(i, end="")
+
+#
+for i in "python":
+    if i == "t":
+        break
+    print(i, end="")
+else:
+    print("程序正常退出")
+

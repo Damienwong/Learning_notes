@@ -151,10 +151,20 @@ import struct
 #     print(i, end="")
 
 #
-for i in "python":
-    if i == "t":
-        break
-    print(i, end="")
-else:
-    print("程序正常退出")
+# for i in "python":
+#     if i == "t":
+#         break
+#     print(i, end="")
+# else:
+#     print("程序正常退出")
 
+s1 = '{:#08x}'.format(15)
+s2 = '{:#8x}'.format(15)
+
+s3 = '0x{:08x}'.format(15)
+s4 = '0x{:8x}'.format(15)
+
+print(' s1: {}\n'.format(s1),
+      's2: {}\n'.format(s2),
+      's3: {}\n'.format(s3),
+      's4: {}\n'.format(s4))

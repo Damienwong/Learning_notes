@@ -158,13 +158,67 @@ import struct
 # else:
 #     print("程序正常退出")
 
-s1 = '{:#08x}'.format(15)
-s2 = '{:#8x}'.format(15)
+# s1 = '{:#08x}'.format(15)
+# s2 = '{:#8x}'.format(15)
+#
+# s3 = '0x{:08x}'.format(15)
+# s4 = '0x{:8x}'.format(15)
+#
+# print(' s1: {}\n'.format(s1),
+#       's2: {}\n'.format(s2),
+#       's3: {}\n'.format(s3),
+#       's4: {}\n'.format(s4))
 
-s3 = '0x{:08x}'.format(15)
-s4 = '0x{:8x}'.format(15)
+from collections import deque
+q = deque([0, 1, 2, 3, 4])
+print(5 in q)
+print(4 in q)
 
-print(' s1: {}\n'.format(s1),
-      's2: {}\n'.format(s2),
-      's3: {}\n'.format(s3),
-      's4: {}\n'.format(s4))
+# 顺时针
+q = deque([0, 1, 2, 3, 4])
+q.rotate(2)
+print('顺时针: ', q)
+
+# 逆时针
+q = deque([0, 1, 2, 3, 4])
+q.rotate(-2)
+print('逆时针: ', q)
+
+# extend
+q = deque([0, 1, 2, 3, 4])
+q.extend([5, 6, 7])
+print('extend: ', q)
+
+# extendleft
+q = deque([0, 1, 2, 3, 4])
+q.extendleft([0, -1, -2])
+print('extend: ', q)
+print(q.index(-2, 0, 2))  # 指定查找区间
+
+
+# q = deque(maxlen=3)
+# q.append([1, 2, 3])
+# q.append('s')
+# q.append(15)
+# print(q)
+#
+# q.append(b'\x01')
+# print(q)
+#
+# q.appendleft(0)
+# print(q)
+# # 增加
+# q.append(5)
+# print(q)
+#
+# # 从左侧增加
+# q.appendleft(0)
+# print(q)
+#
+# # 删除
+# q.pop()
+# print(q)
+#
+# # 删除左侧
+# q.popleft()
+# print(q)

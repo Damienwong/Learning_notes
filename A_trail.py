@@ -169,31 +169,31 @@ import struct
 #       's3: {}\n'.format(s3),
 #       's4: {}\n'.format(s4))
 
-from collections import deque
-q = deque([0, 1, 2, 3, 4])
-print(5 in q)
-print(4 in q)
-
-# 顺时针
-q = deque([0, 1, 2, 3, 4])
-q.rotate(2)
-print('顺时针: ', q)
-
-# 逆时针
-q = deque([0, 1, 2, 3, 4])
-q.rotate(-2)
-print('逆时针: ', q)
-
-# extend
-q = deque([0, 1, 2, 3, 4])
-q.extend([5, 6, 7])
-print('extend: ', q)
-
-# extendleft
-q = deque([0, 1, 2, 3, 4])
-q.extendleft([0, -1, -2])
-print('extend: ', q)
-print(q.index(-2, 0, 2))  # 指定查找区间
+# from collections import deque
+# q = deque([0, 1, 2, 3, 4])
+# print(5 in q)
+# print(4 in q)
+#
+# # 顺时针
+# q = deque([0, 1, 2, 3, 4])
+# q.rotate(2)
+# print('顺时针: ', q)
+#
+# # 逆时针
+# q = deque([0, 1, 2, 3, 4])
+# q.rotate(-2)
+# print('逆时针: ', q)
+#
+# # extend
+# q = deque([0, 1, 2, 3, 4])
+# q.extend([5, 6, 7])
+# print('extend: ', q)
+#
+# # extendleft
+# q = deque([0, 1, 2, 3, 4])
+# q.extendleft([0, -1, -2])
+# print('extend: ', q)
+# print(q.index(-2, 0, 2))  # 指定查找区间
 
 
 # q = deque(maxlen=3)
@@ -221,4 +221,139 @@ print(q.index(-2, 0, 2))  # 指定查找区间
 #
 # # 删除左侧
 # q.popleft()
-# print(q)
+# print(q).
+
+# for i in range(127, -1, -1):
+#     print(i)
+
+# from collections import defaultdict
+# s = defaultdict(dict)
+# for i in range(1, 129):
+#     s[i] = defaultdict(list)
+# s[3]['B'].append(3)
+# s[3]['B'].append(4)
+# print(s)
+# a = {'A': [3]}
+# b = {'A': [4]}
+#
+# print(a + b)
+# import csv
+#
+# # def write_csv_header(header, savefile):
+# #     with open(savefile, 'w', encoding='utf8', newline='') as csvfile:
+# #         myWrite = csv.writer(csvfile)
+# #         myWrite.writerow(header)
+#
+# def write_n_row_to_csv(csv_rows, savefile):
+#     with open(savefile, 'a+', encoding='utf8', newline='') as csvfile:
+#         myWriter = csv.writer(csvfile)
+#         for csv_row in csv_rows:
+#             myWriter.writerow(csv_row)
+#
+# # write_csv_header(['A', 'B', 'C'], r'D:\WORK\00_QT64相关\Parse_check\123.csv')
+# write_n_row_to_csv([[1, 2, 3]], r'D:\WORK\00_QT64相关\Parse_check\123.csv')
+#
+# # write_csv_header(['A', 'B', 'C'], r'D:\WORK\00_QT64相关\Parse_check\123.csv')
+# write_n_row_to_csv([[4, 5, 6]], r'D:\WORK\00_QT64相关\Parse_check\123.csv')
+
+# AT128_UDP_Struct = np.dtype([
+#         ('pre-header', [
+#             ('start_str', 'S2'),
+#             ('major_version', 'u1'),
+#             ('minor_version', 'u1'),
+#             ('header_reserved', 'u2')]
+#          ),
+#
+#         ('header', [
+#             ('laser_num', 'u1'),
+#             ('block_num', 'u1'),
+#             ('first_block_return', 'u1'),
+#             ('distance_unit', 'u1'),
+#             ('return_number', 'u1'),
+#             ('flags', 'u1')]
+#          ),
+#
+#         ('body', [
+#             ('block', [
+#                 ('azimuth', 'u2'),
+#                 ('fine_azimuth', 'u1'),
+#                 ('dis_ref', [
+#                     ('distance', 'u2'),
+#                     ('reflectivity', 'u1'),
+#                     ('confidence', 'u1')],
+#                  128)],
+#              2),
+#             ('CRC1', 'u4')]
+#          ),
+#
+#         ('tail', [
+#             ('reserved1', '<u2'),
+#             ('reserved1_id', 'u1'),
+#             ('reserved2', '<u2'),
+#             ('reserved2_id', 'u1'),
+#             ('high_t_shutdown', 'u1'),
+#             ('reserved3-1', 'u1'),
+#             ('reserved3-2', 'u1'),
+#             ('reserved3-3', 'u1'),
+#             ('reserved4', 'u1'),
+#             ('reserved5', 'u1'),
+#             ('reserved6', 'u1'),
+#             ('reserved7', 'u1'),
+#             ('reserved8', 'u1'),
+#             ('reserved9', 'u1'),
+#             ('reserved10', 'u1'),
+#             ('reserved11', 'u1'),
+#             ('motor_speed', '<i2'),
+#             ('timestamp', 'u4'),
+#             ('return_mode', 'u1'),
+#             ('factory_info', 'u1'),
+#             ('utc_year', 'u1'),
+#             ('utc_month', 'u1'),
+#             ('utc_day', 'u1'),
+#             ('utc_hour', 'u1'),
+#             ('utc_min', 'u1'),
+#             ('utc_sec', 'u1'),
+#             ('udp_sequence', 'u4'),
+#             ('crc', 'u4'),
+#             ('signature', 'S32')]
+#          )
+#     ])
+
+import heapq
+# nums = [21, 34, 0.2, -4, -5, 3, 1, 100, 100]
+# print(heapq.nlargest(3, nums))
+# print(heapq.nsmallest(4, nums))
+import heapq
+# portfolio = [
+#     {'name': 'IBM', 'shares': 100, 'price': 91.1},
+#     {'name': 'AAPL', 'shares': 50, 'price': 543.22},
+#     {'name': 'FB', 'shares': 200, 'price': 21.09},
+#     {'name': 'HPQ', 'shares': 35, 'price': 31.75},
+#     {'name': 'YHOO', 'shares': 45, 'price': 16.35},
+#     {'name': 'ACME', 'shares': 75, 'price': 115.65}
+# ]
+# cheap = heapq.nsmallest(3, portfolio, key=lambda s: s['price'])
+# expensive = heapq.nlargest(3, portfolio, key=lambda s: s['price'])
+# print(cheap)
+# print(expensive)
+
+# nums = [1, 8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
+# import heapq
+# heapq.heapify(nums)
+# print(nums)
+
+# nums = [1, 8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
+# import heapq
+# heapq.heapify(nums)
+# print(nums)
+# # 查找最小的3个函数
+# print(heapq.heappop(nums))
+# print(heapq.heappop(nums))
+# print(heapq.heappop(nums))
+
+a = '    spacious     '
+print(type(a))
+print(a.strip())
+
+s = 'www.example.com'
+print(s.strip('w.moc'))

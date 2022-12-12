@@ -351,9 +351,127 @@ import heapq
 # print(heapq.heappop(nums))
 # print(heapq.heappop(nums))
 
-a = '    spacious     '
-print(type(a))
-print(a.strip())
+# a = '    spacious     '
+# print(type(a))
+# print(a.strip())
+#
+# s = 'www.example.com'
+# print(s.strip('w.moc'))
 
-s = 'www.example.com'
-print(s.strip('w.moc'))
+# prices = {
+#     'ACME': 45.23,
+#     'AAPL': 612.78,
+#     'IBM': 205.55,
+#     'HPQ': 37.20,
+#     'FB': 10.75
+# }
+#
+# prices_and_names = zip(prices.values(), prices.keys())
+# print(min(prices_and_names))
+#
+# print(sorted(prices_and_names))
+#
+# print(max(prices_and_names))
+
+# prices = {'AAA': 45.23, 'ZZZ': 45.23}
+# print(min(zip(prices.values(), prices.keys())))
+# print(max(zip(prices.values(), prices.keys())))
+
+# a = {
+#     'x' : 1,
+#     'y' : 2,
+#     'z' : 3
+# }
+#
+# b = {
+#     'w': 10,
+#     'x': 11,
+#     'y': 2
+# }
+#
+# print(a.items())  # items()方法返回包含(key, value)对的元素视图对象
+# res1 = a.keys() & b.keys()  # 找相同的key
+# print(res1)
+# res2 = a.keys() - b.keys()  # 在a中不在b中的key
+# print(res2)
+# res3 = a.items() & b.items()  # 找到a b中相同的键值对
+# print(res3)
+#
+# res4 = {key: a[key] for key in a.keys() - {'z'}}
+# print(res4)
+#
+# a = [7, 8,1, 2, 3,4,5, 7,7 ,7, 8,2,1 ]
+#
+# l = set()
+# for i in a:
+#     if i in l:
+#         pass
+#     else:
+#         l.add(i)
+# print(l)
+
+# items = [0, 1, 2, 3, 4, 5, 6]
+# print(items[2: 6])
+#
+# slice_a = slice(2, 6)
+#
+# print(items[slice_a])
+#
+# print(type(slice_a))
+#
+# items[slice_a] = [7, 7, 7, 7, 7, 7]
+# print(items)
+#
+# print(slice_a.start, slice_a.stop, slice_a.step)  # 切片各个属性
+#
+# slice_b = slice(5, 50, 2)
+# print(slice_b.start, slice_b.stop, slice_b.step)
+
+# slice_a = slice(2, 50, 2)
+#
+# print(slice_a)
+# print(slice_a.indices(30))
+#
+# s = 'abcdefghijklmnopqrstuvwxyz'
+#
+# alp = []
+# for i in range(*slice_a.indices(len(s))):
+#     alp.append(s[i])
+# print(alp)
+
+# from collections import Counter
+# words = [
+#     'look', 'into', 'my', 'eyes', 'look', 'into', 'my', 'eyes',
+#     'the', 'eyes', 'the', 'eyes', 'the', 'eyes', 'not', 'around', 'the',
+#     'eyes', "don't", 'look', 'around', 'the', 'eyes', 'look', 'into',
+#     'my', 'eyes', "you're", 'under'
+# ]
+#
+# word_counts = Counter(words)
+# print(word_counts) # 底层实现上一个Counter的对象相当于一个字典
+# print(type(word_counts))
+# print(word_counts['eyes'])
+#
+# top_three = word_counts.most_common(3)
+# print(top_three)
+#
+# more_words = ['eyes', 'nose', 'eyes']
+# word_counts.update(more_words)
+# print(word_counts)
+#
+# word_counts['eyes'] += 1
+# print(word_counts)
+
+from collections import Counter
+
+a = 'why are you so crazy?'
+b = 'I do not know.'
+count_a = Counter(a)
+count_b = Counter(b)
+print(count_a)
+print(count_b)
+print(count_a + count_b)
+print(count_a - count_b)
+
+
+

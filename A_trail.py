@@ -462,16 +462,65 @@ import heapq
 # word_counts['eyes'] += 1
 # print(word_counts)
 
-from collections import Counter
+# from collections import Counter
+#
+# a = 'why are you so crazy?'
+# b = 'I do not know.'
+# count_a = Counter(a)
+# count_b = Counter(b)
+# print(count_a)
+# print(count_b)
+# print(count_a + count_b)
+# print(count_a - count_b)
 
-a = 'why are you so crazy?'
-b = 'I do not know.'
-count_a = Counter(a)
-count_b = Counter(b)
-print(count_a)
-print(count_b)
-print(count_a + count_b)
-print(count_a - count_b)
+
+# class User:
+#     def __init__(self, user_name, user_id):
+#         self.user_name = user_name
+#         self.user_id = user_id
+#
+#     def __repr__(self):
+#         return 'User({}_{})'.format(self.user_name, self.user_id)
+#
+#
+# users = [User('Jack', 12), User('Tom', 23), User('Harry', 32), User('Emma', 12)]
+# print(users)
+# # 方案一：lambda的方式
+# print(sorted(users, key=lambda x: x.user_id))
+#
+# # 方案二：operator.attrgetter()的方式
+# from operator import attrgetter
+# print(sorted(users, key=attrgetter('user_id')))
+# print(sorted(users, key=attrgetter('user_id', 'user_name')))
+# print(min(users, key=attrgetter('user_id')))
+# print(min(users, key=attrgetter('user_id', 'user_name')))
+# print(max(users, key=attrgetter('user_id')))
+#
+# from itertools import groupby
+# users = [User('Jack', 12), User('Tom', 32), User('Harry', 32), User('Emma', 12)]
+# print(users.sort(key=attrgetter('user_id')))
+
+rows = [
+    {'address': '5412 N CLARK', 'date': '07/01/2012'},
+    {'address': '5148 N CLARK', 'date': '07/04/2012'},
+    {'address': '5800 E 58TH', 'date': '07/02/2012'},
+    {'address': '2122 N CLARK', 'date': '07/03/2012'},
+    {'address': '5645 N RAVENSWOOD', 'date': '07/02/2012'},
+    {'address': '1060 W ADDISON', 'date': '07/02/2012'},
+    {'address': '4801 N BROADWAY', 'date': '07/01/2012'},
+    {'address': '1039 W GRANVILLE', 'date': '07/04/2012'},
+]
+
+from operator import itemgetter
+from itertools import groupby
+
+rows.sort(key=itemgetter('date'))
+print(rows)
+
+for data, items in groupby(rows, key=itemgetter('date')):
+    print(data)
+    for item in items:
+        print(item)
 
 
 

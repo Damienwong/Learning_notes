@@ -500,27 +500,91 @@ import heapq
 # users = [User('Jack', 12), User('Tom', 32), User('Harry', 32), User('Emma', 12)]
 # print(users.sort(key=attrgetter('user_id')))
 
-rows = [
-    {'address': '5412 N CLARK', 'date': '07/01/2012'},
-    {'address': '5148 N CLARK', 'date': '07/04/2012'},
-    {'address': '5800 E 58TH', 'date': '07/02/2012'},
-    {'address': '2122 N CLARK', 'date': '07/03/2012'},
-    {'address': '5645 N RAVENSWOOD', 'date': '07/02/2012'},
-    {'address': '1060 W ADDISON', 'date': '07/02/2012'},
-    {'address': '4801 N BROADWAY', 'date': '07/01/2012'},
-    {'address': '1039 W GRANVILLE', 'date': '07/04/2012'},
-]
+# rows = [
+#     {'address': '5412 N CLARK', 'date': '07/01/2012'},
+#     {'address': '5148 N CLARK', 'date': '07/04/2012'},
+#     {'address': '5800 E 58TH', 'date': '07/02/2012'},
+#     {'address': '2122 N CLARK', 'date': '07/03/2012'},
+#     {'address': '5645 N RAVENSWOOD', 'date': '07/02/2012'},
+#     {'address': '1060 W ADDISON', 'date': '07/02/2012'},
+#     {'address': '4801 N BROADWAY', 'date': '07/01/2012'},
+#     {'address': '1039 W GRANVILLE', 'date': '07/04/2012'},
+# ]
+#
+# from operator import itemgetter
+# from itertools import groupby
+#
+# rows.sort(key=itemgetter('date'))
+# print(rows)
+#
+# for data, items in groupby(rows, key=itemgetter('date')):
+#     print(data)
+#     for item in items:
+#         print(item)
 
-from operator import itemgetter
-from itertools import groupby
+# import re
+# line = 'asdf fjdk; afed, fjek,asdf, foo'
+# str_list = re.split(r'[;,\s]\s*', line)
+# print(str_list)
 
-rows.sort(key=itemgetter('date'))
-print(rows)
+# filename = 'spam.txt'
+# print(filename.endswith('.txt'))
+# print(filename.startswith('file:'))
+#
+# print(filename.endswith(('txt', 'png'))) # 匹配多种可能，将所有匹配项放入到一个元祖中
 
-for data, items in groupby(rows, key=itemgetter('date')):
-    print(data)
-    for item in items:
-        print(item)
+# parts = ['Is', 'Chicago', 'Not', 'Chicago?']
+# print(' '.join(parts))
+# print(','.join(parts))
+# print(''.join(parts))
 
+# a = 'Hello'' ''World'
+# print(a)
 
+# data = ('Li', 23, 35, 23.5, b'/xff')
+# print(','.join(str(d) for d in data))
 
+# def sample():
+#     yield 'Is'
+#     yield 'Chicago'
+#     yield 'Not'
+#     yield 'Chicago?'
+#
+#
+# text = ' '.join(sample())
+# print(text)
+
+# a = '26'
+# b = '25'
+# c = '27'
+# print(a + ':' + b + ':' + c)  # Ugly
+# print(':'.join([a, b, c]))  # Still ugly
+# print(a, b, c, sep=':')  # Better
+
+# class TryIt:
+#     def __init__(self):
+#         self.sn = 'QT128'
+#
+#     def result_it(self):
+#         print('Lidar been tested is {self.sn}'.format_map(vars()))
+#
+# TI = TryIt()
+# TI.result_it()
+#
+# print('Lidar been tested is {sn}'.format_map(vars(TI)))
+
+# print('{name} is {n} years old'.format(name='Li', n='3'))
+#
+# name = 'Li'
+# n = '3'
+# print('{name} is {n} years old.'.format_map(vars()))
+
+# print(round(1.23, 1))
+# print(round(-1.3634, 2))
+# print(round(1.253, 1))  # 当一个值在两个边界的中间的时候，返回最近的偶数
+# print(round(1.353, 1))
+# print(round(123.543, -1))  # ndigits为负时，舍入运算会作用在十位、百位、千位等上面
+# print('value is {:0.3f}'.format(12.5638))
+
+x = 1234.56789
+print(format(x, '0.2f'))

@@ -522,9 +522,11 @@ import heapq
 #     for item in items:
 #         print(item)
 
-import os
-import psutil
-pid = os.getpid()
-print(pid)
-
+# import os
+# import psutil
+# pid = os.getpid()
+# print(pid)
+a = ['a', 'b', 'c']
+for index, item in enumerate(a):
+    print(index, item)
 

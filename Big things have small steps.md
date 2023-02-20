@@ -271,3 +271,17 @@ D:\Codes\for_trial_only\Data_analyses\first_100second.py
 <class 'str'> D:/Codes/for_trial_only/Data_analyses/first_100second.py
 """
 ```
+
+### for循环同时获取列表的索引和元素 enumerate
+
+```python
+a = ['a', 'b', 'c']
+for index, item in enumerate(a):
+    print(index, item)
+
+'''
+0 a
+1 b
+2 c
+'''
+```

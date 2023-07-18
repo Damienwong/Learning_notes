@@ -526,7 +526,205 @@ import heapq
 # import psutil
 # pid = os.getpid()
 # print(pid)
-a = ['a', 'b', 'c']
-for index, item in enumerate(a):
-    print(index, item)
+# a = ['a', 'b', 'c']
+# for index, item in enumerate(a):
+#     print(index, item)
 
+# from itertools import zip_longest
+# names = ['alpha', 'bate', 'delta', 'charlie']
+# pnts = [23, 56, 32]
+# for name, point in zip_longest(names, pnts):
+#     print(name, point)
+#
+# print('==============')
+#
+# for name, point in zip_longest(names, pnts, fillvalue=0):
+#     print(name, point)
+
+# from itertools import *
+# a = [1, 2, 3]
+# b = set('alpha')
+# c = {'a': 1, 'b': 2}
+# for i in chain(a, b, c):
+#     print(i)
+
+
+# from collections.abc import Iterable
+#
+#
+# def flatten(items, ignore_type=(str, bytes)):
+#     for i in items:
+#         if isinstance(i, Iterable) and not isinstance(i, ignore_type):  # isinstance(i, Iterable)检查元素是否可以迭代；
+#             # not isinstance(i, ignore_type)将字符串和字节排除在可迭代对象外
+#             yield from flatten(i)  # yield from在生成器中调用其他生成器作为子例程
+#         else:
+#             yield i
+#
+#
+# sth = [1, 2, 3, [4, 5, [23, 12], 'jack'], [b'\x12\xff', 67]]
+# for x in flatten(sth):
+#     print(x)
+
+# with open('sample.txt', 'wt') as f:
+#     f.write('Hello World.\n')
+#     f.write('Hello world again.\n')
+#     f.write('Hello world the third time.')
+#
+# with open('sample.txt', 'rt') as f:
+#     data = f.read()
+#     print(data)
+#
+# with open('sample.txt', 'rt') as f:
+#     for idx, line in enumerate(f):
+#         print(idx, line)
+
+#with open('sample.txt', 'at') as f:
+#     print('print to file!', file=f)
+# print('ACME', 50, 91.5)
+# print('ACME', 50, 91.5, sep=',')
+# print('ACME', 50, 91.5, sep=',', end='!\n')
+#
+# for i in range(5):
+#     print(i)
+#
+# for i in range(5):
+#     print(i, end=' ')  # 使用end参数也可以在输出中禁止换行
+#
+# row = ('ACME', 50, 91.5)
+# print(row)
+# print(*row, sep=',')
+
+# with open('sample1.bin', 'wb') as f:
+#
+#     f.write(b'Hello wolrd')
+#     f.write(b'\xcc\xdd\xff')
+#
+# with open('sample1.bin', 'rb') as f:
+#     data = f.read()
+#     print(data)
+#     print(data.hex())
+
+# text string 文本字符串
+# t = 'Hello World'
+# print(t[0])
+# for i in t:
+#     print(i, end=', ')
+#
+# print('\n========')
+# Byte string 字节字符串
+# t = b'Hello World'
+# print(t.decode('utf-8'))
+#
+# t = 'Hello World'
+# print(t.encode('utf-8'))
+
+# print(t[0])
+# for i in t:
+#     print(i, end=', ')
+
+# import array
+# nums = array.array('i', [1, 2, 3, 4])
+# with open('sample1.bin', 'xb') as f:
+#     f.write(nums)
+
+# with open('sample1.bin', 'rb') as f:
+#     data = f.read()
+#     print(data)
+#     print(data.hex())
+
+# with open('./files/file_1.txt') as f:
+#     for line in f:
+#         print(line)
+
+
+import gzip
+# from zipfile import ZipFile
+# with ZipFile('./files/file_1.zip', 'r') as f:
+#     with f.open('file_1.txt', 'r') as f1:
+#         data = f1.read()
+#         print(type(data))
+#         print(data.decode())
+
+# import os
+#
+#
+# def read_into_buffer(filename):
+#     buf = bytearray(os.path.getsize(filename))
+#     with open(filename, 'rb') as f:
+#         f.readinto(buf)
+#     return buf
+#
+#
+# with open(r'.\files\file_2.bin', 'wb') as f:
+#     f.write(b'Hello World \xff')
+# buf = read_into_buffer(r'.\files\file_2.bin')
+# print(buf)
+# import os
+# names = os.listdir(r'D:\Codes\Learning_notes')
+# print(names)
+#
+# file_names = [name for name in os.listdir(r'D:\Codes\Learning_notes')
+#               if os.path.isfile(os.path.join(r'D:\Codes\Learning_notes', name))]
+# print(file_names)
+#
+# dir_name = [name for name in os.listdir(r'D:\Codes\Learning_notes')
+#             if os.path.isdir(os.path.join(r'D:\Codes\Learning_notes', name))]
+# print(dir_name)
+
+# from snapshot_selenium import snapshot
+#
+# # print(snapshot)
+# import pyecharts.options as opts
+# from pyecharts.charts import Grid, Boxplot, Scatter
+# import pandas as pd
+# import glob
+# import time
+# import os
+# import operator
+#
+# path = r'\\172.16.2.20\qt\TestData\QT-128\4.版本测试\B sample\HB2第三轮迭代SOP\版本3.1.31测试数据\点云性能测试\定量测试\室内精准度测试\QT128C2X-C04-1190\高反板\QT128C2X-C04-1190_202302181019-15米'
+#
+# range_path = path + r'\*projection*.csv'
+# range_path_list = glob.glob(range_path)
+# datadic = {}
+# for csv in range_path_list:
+#     file_str = os.path.splitext(csv)[0]
+#     laserid = file_str.split('_')[-1]
+#     channelid = int(laserid) + 1
+#     df = pd.read_csv(csv)
+#     try:
+#         distancelist = df.dis_projection.tolist()
+#     except:
+#         distancelist = []
+#     datadic[channelid] = distancelist
+#
+# datadic = dict(sorted(datadic.items(), key=operator.itemgetter(0)))
+# data_list = datadic.values()
+# print(datadic)
+#
+# box_plot = Boxplot()
+#
+# box_plot = (
+#     box_plot.add_xaxis(xaxis_data=[i for i in range(1, 129)])
+#         .add_yaxis(series_name="", y_axis=box_plot.prepare_data(datadic.values()), )
+#         .set_global_opts(
+#         title_opts=opts.TitleOpts(
+#             pos_left="center", title="Michelson-Morley Experiment"
+#         ),
+#         tooltip_opts=opts.TooltipOpts(trigger="item", axis_pointer_type="shadow"),
+#     )
+#     .render('velocity.html')
+# )
+
+# import plotly
+
+# import plotly.express as px
+# import pandas as pd
+#
+# dic = {'x': [1, 2, 3], 'y': [4, 5, 6], 'z': [7, 8, 9], 'ref': [23, 34, 65], 'conf': [1, 0, 1]}
+#
+# df = pd.DataFrame(dic)
+# fig = px.scatter_3d(df, x='x', y='y', z='z',
+#                     color='ref', symbol='conf')
+# fig.write_html('sam.html')
+print('lllll')

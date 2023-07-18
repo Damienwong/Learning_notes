@@ -272,38 +272,16 @@ D:\Codes\for_trial_only\Data_analyses\first_100second.py
 """
 ```
 
-### 使用生成器表达式作为参数传递给语法
+### for循环同时获取列表的索引和元素 enumerate
+
 ```python
-nums = [1, 3, 5, 7, 9]
-s1 = sum((x * x for x in nums))  # 显式的传递一个生成器表达式对象
-print(s1)
-s2 = sum(x * x for x in nums)  # 更加优雅的实现方式，省略了括号
-print(s2)
-s3 = sum([x * x for x in nums])  # 同样的效果，但是会创建额外的列表，比较浪费内存
-print(s3)
+a = ['a', 'b', 'c']
+for index, item in enumerate(a):
+    print(index, item)
 
-"""
-165
-165
-165
-"""
-```
-
-### 数字的四舍五入
-```python
-print(round(1.23, 1))
-print(round(-1.3634, 2))
-print(round(1.253, 1))  # 当一个值在两个边界的中间的时候，返回最近的偶数
-print(round(1.353, 1))
-print(round(123.543, -1))  # ndigits为负时，舍入运算会作用在十位、百位、千位等上面
-print('value is {:0.3f}'.format(12.5638))
-
-"""
-1.2
--1.36
-1.3
-1.4
-120.0
-value is 12.564
-"""
+'''
+0 a
+1 b
+2 c
+'''
 ```

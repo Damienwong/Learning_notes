@@ -727,4 +727,23 @@ import gzip
 # fig = px.scatter_3d(df, x='x', y='y', z='z',
 #                     color='ref', symbol='conf')
 # fig.write_html('sam.html')
-print('lllll')
+# print('lllll')
+
+# a = 0
+# try:
+#     while True:
+#         print(a)
+#         assert a < 5
+#         a += 1
+#         print(a, 'OK')
+# except Exception as e:
+#     print(str(e))
+#
+# print('done')
+# from graphics.primitive.text import *
+# spam()
+
+
+from graphics.primitive.text import *
+spam()
+grok()

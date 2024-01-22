@@ -738,12 +738,255 @@ import gzip
 #         print(a, 'OK')
 # except Exception as e:
 #     print(str(e))
+# #
+# # print('done')
+# # from graphics.primitive.text import *
+# # spam()
 #
-# print('done')
-# from graphics.primitive.text import *
-# spam()
+#
+# # from graphics.primitive.text import *
+# # spam()
+# # grok()
+# import numpy as np
+# from scipy.optimize import curve_fit
+# import matplotlib.pyplot as plt
+#
+# # 假设有一组数据
+# x_data = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+# y_data = np.array([0, 2, 8, 18, 30, 45, 60, 42, 20, 5])
+#
+# # 定义高斯函数
+# def gaussian(x, A, mu, sigma):
+#     return A * np.exp(-(x - mu)**2 / (2 * sigma**2))
+#
+# # 使用curve_fit函数进行高斯拟合
+# params, covariance = curve_fit(gaussian, x_data, y_data, p0=[1, np.mean(x_data), 1])
+#
+# # 获取拟合参数
+# A, mu, sigma = params
+#
+# # 绘制拟合曲线
+# x_fit = np.linspace(0, 9, 100)  # 创建用于绘制拟合曲线的x值
+# y_fit = gaussian(x_fit, A, mu, sigma)
+#
+# # 绘制原始数据和拟合曲线
+# plt.plot(x_data, y_data, 'bo', label='Data')
+# plt.plot(x_fit, y_fit, 'r-', label='Fit')
+# plt.legend()
+# plt.show()
+#
+# # 输出拟合参数
+# print(f'A = {A}, mu = {mu}, sigma = {sigma}')
+
+# import pandas as pd
+#
+# # 创建一个示例DataFrame
+# data = {'A': [1, 2, 3, 4, 5],
+#         'B': [10, 20, 30, 40, 50]}
+#
+# df = pd.DataFrame(data)
+#
+# # 使用条件判断创建新列
+# df['new_column'] = 0  # 先初始化新列
+#
+# # 基于条件判断给新列赋值
+# df['new_column'] = df.apply(lambda row: row['A'] if row['A'] > 3 else row['B'] - 1, axis=1)
+#
+# print(df)
+from hashlib import sha256
+import pandas as pd
+import numpy as np
+import os
+
+# def angle_bin_file_gen(sn, angle_df_path, save_path):
+#     """
+#     生成角度文件bin文件
+#
+#     :return:
+#     """
+#     header = [0xee, 0xff, 0x04, 0x01, 0x00, 0x00, 0x30]
+#
+#     df = pd.read_csv(angle_df_path)
+#     print(df)
+#     angle_list = df['Azimuth'].tolist() + df['Elevation'].tolist()
+#     angle_int_list = [int(i * (2 ** 9)) for i in angle_list]
+#
+#     data = header + [512] + angle_int_list
+#     print(data)
+#
+#     d = struct.pack('<7BH96h', *data)
+#     sha = sha256(d).hexdigest()
+#     save_bin = os.path.join(save_path, '{}_calibration.dat'.format(sn))
+#
+#     file = open(save_bin, 'wb')
+#     file.write(d)
+#     file.write(bytes.fromhex(sha))
+#     print('Transition Done.')
+#
+#
+#
+# angle_bin_file_gen('0006', r'D:\WORK\MT\MT5_A0_Calibration\0006_Angular_test_202310282008\0006_calibration.csv', r'D:\WORK\MT\MT5_A0_Calibration\0006_Angular_test_202310282008')
+
+# with open(r'D:\WORK\MT\MT5_A0_Calibration\0010_Angular_test_202310282206\0010_calibration.dat', 'rb') as file_handle:
+#     data = file_handle.read()
+# print(data.hex())
+# print(len(data))
+
+# df = pd.read_csv(r'D:\WORK\MT\参数2文件\006\0006_calibration.csv')
+#
+# df2 = pd.DataFrame({'LaserID': df.LaserID.tolist(),
+#                     'Azimuth': [i - 5 for i in df.Azimuth.tolist()],
+#                     'Elevation': df.Elevation.tolist()})
+# df2.to_csv(r'D:\WORK\MT\参数2文件\006\0006_calibration1.csv', index=None)
+
+# a = 4.096
+# b = a * 512
+# c = int(b)
+# print(c)
+# d = c.to_bytes(2, 'big', signed=True)
+# print(d.hex())
+
+# b = b'\xfe\x24'
+# value = int.from_bytes(b, byteorder='big', signed=False)
+#
+# print(value/512)
+#
+# import pandas as pd
+#
+# # 创建一个示例DataFrame
+# data = {'列1': [10, 15, 30, 25],
+#         '列2': [5, 12, 20, 18],
+#         '列3': [8, 14, 28, 24]}
+# df = pd.DataFrame(data)
+#
+# # 定义要进行加法操作的列名列表
+#
+#
+# # 针对每一列，将其加上20
+#
+# df['列1'] = df['列1'] + 20
+#
+# # 打印结果
+# print(df)
+#
+# a = -0.1
+# a_int = int(0.128 * 512)
+# print(a_int)
+# print(a_int.to_bytes(2, 'big').hex())
+
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit
+
+# excel_file_path = r'D:\WORK\MT\1107AngleCalib\A0-012_Angular_test_202311072121\elevation\1_angle_ele.xlsx'
+# sheet_name = 'Sheet1'
+# columns_to_read = ['angle', 'intens']
+# df = pd.read_excel(excel_file_path, sheet_name=sheet_name, usecols=columns_to_read)
+# print(df)
+#
+# def gaussian(x, amplitude, mean, stddev):
+#     return amplitude * np.exp(-((x - mean) / stddev) ** 2 / 2)
+#
+#
+# # 生成示例数据
+# x_data = np.array(df['angle'].tolist())  # 输入数据
+# y_data = np.array(df['intens'].tolist())  # 对应的输出数据
+#
+# # 初始猜测参数
+# initial_guess = [max(y_data), np.mean(x_data), np.std(x_data)]
+#
+# # 进行高斯拟合
+# params, covariance = curve_fit(gaussian, x_data, y_data, p0=initial_guess)
+#
+# # 提取拟合后的参数
+# amplitude, mean, stddev = params
+#
+# # 绘制原始数据和拟合结果
+# plt.plot(x_data, y_data, 'bo', label='Original Data')
+# plt.plot(x_data, gaussian(x_data, amplitude, mean, stddev), 'r-', label='Fit')
+#
+# # 显示峰值
+# peak_value = gaussian(mean, amplitude, mean, stddev)
+# print("峰值:", peak_value)
+# print("峰值对应的自变量:", mean)
+#
+# # 显示图例和绘制图形
+# plt.legend()
+# plt.show()
+# from PIL import Image, ImageDraw, ImageFont
+#
+# def modify_letter(input_path, output_path, target_letter, new_letter):
+#     # 打开图像
+#     image = Image.open(input_path)
+#
+#     # 获取图像的宽度和高度
+#     width, height = image.size
+#
+#     # 创建一个用于绘制文本的ImageDraw对象
+#     draw = ImageDraw.Draw(image)
+#
+#     # 选择字体和字号
+#     font = ImageFont.load_default()
+#
+#     # 遍历图像的每个像素
+#     for x in range(width):
+#         for y in range(height):
+#             # 获取当前像素的颜色值
+#             current_color = image.getpixel((x, y))
+#
+#             # 获取当前像素的字母
+#             current_letter = chr(current_color[0])
+#
+#             # 如果当前像素的字母是目标字母，则替换为新字母
+#             if current_letter == target_letter:
+#                 draw.text((x, y), new_letter, font=font, fill=current_color)
+#
+#     # 保存修改后的图像
+#     image.save(output_path)
+#
+# # 示例用法
+# modify_letter(r"\\10.69.31.10\ft\专项测试\客户Mobis测试\20231201_C-final雷达室内测远能力\RangeTest_FT120-C-final-C051_202312011926-22.764m\FT120-C-final-C051_result_at_22.764.png",
+#               r"C:\Users\wanghaibo\Downloads\output.png", "u", "e")
 
 
-from graphics.primitive.text import *
-spam()
-grok()
+import matplotlib.pyplot as plt
+import pandas as pd
+from matplotlib.font_manager import FontProperties
+#
+# # 设置中文字体
+# plt.rc('font', family='Time New Rome')
+# plt.rcParams['font.family'] = 'simhei'
+# plt.rcParams['axes.unicode_minus'] = False
+#
+#
+# df = pd.read_csv(r'\\10.69.31.10\ft\版本测试\FT120 SOP版本测试\20231129_室外测远\FT120-PV-0003\10m\RangeTest_FT120-PV-0003_202311281540\FT120-PV-0003_result_at_10.253.csv')
+#
+# # 创建一个7行10列的文本数据
+#
+# # 创建图表
+# fig, ax = plt.subplots()
+# plt.xlim(-1, 11)
+# plt.ylim(-1, 10)
+#
+# # 在图上添加文本
+# for i in range(10):
+#     for j in range(7):
+#         ax.text(i, 9 - j, 'Area {}\n\n POD: {}'.format(j * 10 + i, df['POD'].tolist()[j * 10 + i]), ha="center", va="center", fontsize=10)
+# plt.title('FT120 全区域探测概率 10%@10m (100klx)', fontsize=25)
+# # 显示图表
+# plt.show()
+
+# df = pd.read_csv(r'C:\Users\wanghaibo\Downloads\MT_A1_a1.csv')
+#
+# df_re = pd.DataFrame({'Laser ID': df['CH'].tolist(),
+#                       'Azimuth': [-i for i in df['水平视场角/°'].tolist()],
+#                       'Elevation': df['垂直视场角/°'].tolist()})
+# df_re.to_csv(r'C:\Users\wanghaibo\Downloads\MT_A1_a1_mirror.csv', index=False)
+# print(df_re)
+i = 0
+store = []
+for _ in range(5):
+    i += 1
+    store.add(i)
+    print(i)
+print(store)

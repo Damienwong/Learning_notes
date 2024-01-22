@@ -6,9 +6,9 @@
 
 
 # 相对路径
-from . import png
-from ..primitive import fill
-import png
-
-# 包内绝对路径
-from graphics.formats import png
+# from . import png
+from primitive import fill
+# import png
+#
+# # 包内绝对路径
+# from graphics.formats import png

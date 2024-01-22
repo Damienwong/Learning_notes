@@ -6,5 +6,5 @@
 
 import pkgutil
 
-data = pkgutil.get_data(__graphics.formats__, 'calibration.dat')
-print(data)
+# data = pkgutil.get_data(__graphics.formats__, 'calibration.dat')
+# print(data)

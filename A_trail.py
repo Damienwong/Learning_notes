@@ -983,10 +983,13 @@ from matplotlib.font_manager import FontProperties
 #                       'Elevation': df['垂直视场角/°'].tolist()})
 # df_re.to_csv(r'C:\Users\wanghaibo\Downloads\MT_A1_a1_mirror.csv', index=False)
 # print(df_re)
-i = 0
-store = []
-for _ in range(5):
-    i += 1
-    store.add(i)
-    print(i)
-print(store)
+# i = 0
+# store = []
+# for _ in range(5):
+#     i += 1
+#     store.add(i)
+#     print(i)
+# print(store)
+import os
+
+os.add_dll_directory('D:\WORK\FT\时间戳规律')

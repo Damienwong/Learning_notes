@@ -285,3 +285,6 @@ for index, item in enumerate(a):
 2 c
 '''
 ```
+
+### 列表元素的复制
+![img.png](img.png)

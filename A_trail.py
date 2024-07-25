@@ -990,6 +990,164 @@ from matplotlib.font_manager import FontProperties
 #     store.add(i)
 #     print(i)
 # print(store)
-import os
+# import os
+#
+# os.add_dll_directory('D:\WORK\FT\时间戳规律')
 
-os.add_dll_directory('D:\WORK\FT\时间戳规律')
+# import pandas as pd
+
+# 创建一个示例DataFrame
+# data = {
+#     'A': [1, 2, 3, 1, 2],
+#     'B': ['a', 'b', 'c', 'a', 'b'],
+#     'C': ['x', 'y', 'z', 'x', 'y']
+# }
+# df = pd.DataFrame(data)
+#
+# # 指定'A'列和'B'列的数据相同时删除重复行
+# result_df = df.drop_duplicates(subset=['A', 'B'])
+#
+# print("Original DataFrame:")
+# print(df)
+# print("\nDataFrame after dropping duplicates:")
+# print(result_df)
+
+#
+# import pandas as pd
+#
+# # 创建一个示例DataFrame
+# data = {
+#     'x': [0.467816, 0.467484, 0.467711, 0.466618, 0.467345, 0.466717, 0.467171, 0.465955],
+#     'y': [-107.214790, -107.138870, -107.190811, -106.940201, -107.106903, -106.963051, -107.066940, -106.788330],
+#     'z': [4.906145, 4.902670, 4.905047, 4.407377, 4.901207, 4.894625, 4.899379, 4.401118],
+#     'azimuth': [179.75, 179.75, 179.75, 179.75, 179.75, 179.75, 179.75, 179.75],
+#     'elevation': [0.045728, 0.045728, 0.045728, 0.041190, 0.045728, 0.045728, 0.045728, 0.041190]
+# }
+# df = pd.DataFrame(data)
+#
+# # 指定前两列的数据相同时删除重复行
+# result_df = df.drop_duplicates(subset=['azimuth', 'elevation'])
+# #
+# # print("Original DataFrame:")
+# # print(df)
+# # print("\nDataFrame after dropping duplicates based on 'x' and 'y' columns:")
+# # print(result_df)
+#
+# import open3d as o3d
+# import numpy as np
+#
+# # 读取PCD文件为点云数据
+# pcd_path = r'D:\WORK\Benchmarking\HW96\range\130\1.pcd'
+# point_cloud = o3d.io.read_point_cloud(pcd_path)
+#
+# # 将点云数据转换为NumPy数组
+# points = np.asarray(point_cloud.points)
+#
+# print("NumPy array of points:")
+# print(points)
+#
+# import pyttsx3
+#
+# # 创建一个语音引擎
+# engine = pyttsx3.init()
+#
+# # 设置你想要的语音速度（默认为200）
+# engine.setProperty('rate', 150)  # 150 words per minute
+#
+# # 设置你想要的语音音量（范围从0到1）
+# engine.setProperty('volume', 0.9)  # 90% volume
+#
+# # 将文本转换为语音
+# text = "Welcome to Sigma Lab. 欢迎来到西格玛实验室。"
+# engine.say(text)
+#
+# # 等待语音播放完毕
+# engine.runAndWait()
+
+# import numpy as np
+#
+# # 示例1: 计算单个点的角度
+# y = 1
+# x = 1
+# angle = np.arctan2(y, x)
+# print(f"Angle for point (1, 1): {angle} radians, {np.degrees(angle)} degrees")
+#
+# # 示例2: 计算多个点的角度
+# y = np.array([0, 1, 1, -1, -1])
+# x = np.array([1, 1, -1, -1, 1])
+# angles = np.arctan2(y, x)
+# print(f"Angles in radians: {angles}")
+# print(f"Angles in degrees: {np.degrees(angles)}")
+#
+# # 示例3: 使用广播机制计算标量和数组之间的角度
+# y = np.array([1, 2, 3])
+# x = 1
+# angles = np.arctan2(y, x)
+# print(f"Angles for points (1,1), (2,1), (3,1): {angles} radians, {np.degrees(angles)} degrees")
+
+#
+# from scapy.all import *
+# from collections import defaultdict
+#
+# def reassemble_ip_fragments(pcap_file):
+#     packets = rdpcap(pcap_file)
+#     fragments = defaultdict(list)
+#     reassembled_packets = []
+#
+#     # Collect all fragments by (src_ip, dst_ip, id)
+#     for packet in packets:
+#         if IP in packet:
+#             ip_layer = packet[IP]
+#             if ip_layer.frag != 0 or ip_layer.flags & 1:  # Check if the packet is fragmented
+#                 key = (ip_layer.src, ip_layer.dst, ip_layer.id)
+#                 fragments[key].append(ip_layer)
+#
+#     # Reassemble the fragments
+#     for key, fragment_list in fragments.items():
+#         if fragment_list:
+#             fragment_list.sort(key=lambda x: x.frag)
+#             reassembled_data = b""
+#             for fragment in fragment_list:
+#                 reassembled_data += bytes(fragment.payload)
+#             reassembled_packets.append(reassembled_data)
+#
+#     return reassembled_packets
+#
+#
+# # Example usage
+# pcap_file = r'D:\WORK\Benchmarking\Robin_W\robin_a.pcap'
+# reassembled_data_list = reassemble_ip_fragments(pcap_file)
+# for data in reassembled_data_list:
+#     print(data)
+
+import socket
+import select
+
+
+def clear_buffer(sock):
+    """
+    清除套接字缓冲区中的数据。重点在于使用select.select进行非阻塞检查，如果没有可读数据则跳出循环，实现清空缓存的作用。
+    :param sock:
+    :return:
+    """
+    sockets = [sock]  # 将套接字放入一个列表中，因为select函数需要一个列表作为输入。
+    while True:
+        inputready, _, _ = select.select(sockets, [], [], 0.0)
+        # select.select函数用于监视sockets列表中的套接字，检查是否有可读数据。
+        # 第一个参数：检查可读性的套接字列表；第二个参数：检查可写性的套接字列表；第三个参数：检查异常状态的套接字列表；第四个参数：超时时间，0.0表示立即返回，不等待
+        print(inputready)
+        if not inputready:
+            break
+        for s in inputready:
+            try:
+                s.recv(2048)
+            except Exception as e:
+                print('清除缓冲区时出错：{}'.format(e))
+                return
+
+
+udpsock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+udpsock.bind(('', 2368))
+udpsock.settimeout(10)
+
+clear_buffer(udpsock)

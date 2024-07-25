@@ -288,3 +288,6 @@ for index, item in enumerate(a):
 
 ### 列表元素的复制
 ![img.png](img.png)
+
+### list的其他方法
+![img_1.png](img_1.png)

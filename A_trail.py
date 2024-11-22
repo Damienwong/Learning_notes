@@ -1120,34 +1120,175 @@ from matplotlib.font_manager import FontProperties
 # for data in reassembled_data_list:
 #     print(data)
 
-import socket
-import select
+# import socket
+# import select
+#
+#
+# def clear_buffer(sock):
+#     """
+#     清除套接字缓冲区中的数据。重点在于使用select.select进行非阻塞检查，如果没有可读数据则跳出循环，实现清空缓存的作用。
+#     :param sock:
+#     :return:
+#     """
+#     sockets = [sock]  # 将套接字放入一个列表中，因为select函数需要一个列表作为输入。
+#     while True:
+#         inputready, _, _ = select.select(sockets, [], [], 0.0)
+#         # select.select函数用于监视sockets列表中的套接字，检查是否有可读数据。
+#         # 第一个参数：检查可读性的套接字列表；第二个参数：检查可写性的套接字列表；第三个参数：检查异常状态的套接字列表；第四个参数：超时时间，0.0表示立即返回，不等待
+#         print(inputready)
+#         if not inputready:
+#             break
+#         for s in inputready:
+#             try:
+#                 s.recv(2048)
+#             except Exception as e:
+#                 print('清除缓冲区时出错：{}'.format(e))
+#                 return
+#
+#
+# udpsock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+# udpsock.bind(('', 2368))
+# udpsock.settimeout(10)
+#
+# clear_buffer(udpsock)
 
 
-def clear_buffer(sock):
-    """
-    清除套接字缓冲区中的数据。重点在于使用select.select进行非阻塞检查，如果没有可读数据则跳出循环，实现清空缓存的作用。
-    :param sock:
-    :return:
-    """
-    sockets = [sock]  # 将套接字放入一个列表中，因为select函数需要一个列表作为输入。
-    while True:
-        inputready, _, _ = select.select(sockets, [], [], 0.0)
-        # select.select函数用于监视sockets列表中的套接字，检查是否有可读数据。
-        # 第一个参数：检查可读性的套接字列表；第二个参数：检查可写性的套接字列表；第三个参数：检查异常状态的套接字列表；第四个参数：超时时间，0.0表示立即返回，不等待
-        print(inputready)
-        if not inputready:
-            break
-        for s in inputready:
-            try:
-                s.recv(2048)
-            except Exception as e:
-                print('清除缓冲区时出错：{}'.format(e))
-                return
+# my_list = [1, 2, 2, 3, 4, 4, 5]
+# unique_list = list(set(my_list))
+# print(unique_list)
+#
+# my_list = [1, 2, 2, 3, 4, 4, 5]
+# unique_list = list(dict.fromkeys(my_list))
+# print(unique_list)
+#
+# from collections import Counter
+#
+# my_list = [1, 2, 2, 3, 4, 4, 5]
+# count_dict = dict(Counter(my_list))
+# print(count_dict)
+#
+# int.from_bytes()
+
+# print('fad gjkhsg'.split())
+
+import turtle
+
+# def draw_spiral(my_turtle, line_len):
+#     if line_len > 0:
+#         my_turtle.forward(line_len)
+#         my_turtle.right(90)
+#         draw_spiral(my_turtle, line_len - 5)
+#
+# my_turtle = turtle.Turtle()
+# my_win = turtle.Screen()
+# draw_spiral(my_turtle, 100)
+# my_win.exitonclick()
+
+# def tree(branch_len, t):
+#     if branch_len > 5:
+#         t.forward(branch_len)
+#         t.right(20)
+#         tree(branch_len - 15, t)
+#
+#         t.left(40)
+#         tree(branch_len - 15, t)
+#         t.right(20)
+#         t.backward(branch_len)
+#
+# t = turtle.Turtle()
+# my_win = turtle.Screen()
+# t.left(90)
+# t.up()
+# t.backward(200)
+# t.down()
+# t.color('red')
+# tree(110, t)
+# my_win.exitonclick()
+
+# def sum_add(num_list):
+#     if len(num_list) == 1:
+#         return num_list[0]
+#
+#     else:
+#         print(sum_add(num_list[1:]) + num_list[0])
+#         return sum_add(num_list[1:]) + num_list[0]
+#
+# sum_add([1, 2, 3, 4])
+
+#
+def draw_branch(branch_length):
+    # 绘制分形树
+    if branch_length > 5:
+        # 绘制右侧树枝
+        turtle.forward(branch_length)
+        print('向前', branch_length)
+        turtle.right(20)
+        print('右转 20')
+        draw_branch(branch_length - 15)
+
+        # 绘制左侧树枝
+        turtle.left(40)
+        print('左转 40')
+        draw_branch(branch_length - 15)
+
+        # 返回之前的树枝
+        turtle.right(20)
+        print('右转 20')
+        print(branch_length)
+        turtle.backward(branch_length)
+        print('向后', branch_length)
 
 
-udpsock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-udpsock.bind(('', 2368))
-udpsock.settimeout(10)
 
-clear_buffer(udpsock)
+# 图形设置
+turtle.left(90)
+turtle.penup()
+turtle.backward(260)
+turtle.pendown()
+turtle.pensize(1)
+turtle.pencolor('red')
+
+# 调用递归函数
+draw_branch(120)
+turtle.exitonclick()
+
+# def get_raio(x, up_value):
+#     y1 = (1.53184 - 1.07499) / 99 * (x - 1) + 1.0749
+#     y2 = (1.53184 - 0.4) / 99 * (x - 1) + 0.4
+#     return up_value * (y2 / y1)
+#
+#
+# import pandas as pd
+# import matplotlib.pyplot as plt
+# import matplotlib.font_manager as fm
+# # 设置中文字体，确保系统中安装了黑体字体
+# plt.rcParams['font.sans-serif'] = ['SimHei']  # 使用黑体
+# plt.rcParams['axes.unicode_minus'] = False    # 解决坐标轴负号显示问题
+#
+# file_path = r'C:\Users\wanghaibo\Downloads\artificial sun\101spectra.xlsx'
+#
+# df = pd.read_excel(file_path, sheet_name='567')
+#
+# row_index = 9
+#
+# row_data = df.iloc[row_index]
+# row_list = row_data.tolist()[1:]
+# rate1 = 1.53184 / row_list[-1]
+#
+# fuzhaodu = [i * rate1 for i in row_list]
+# adjust_list = [get_raio(i+1, fuzhaodu[i]) for i in range(100)]
+# print(fuzhaodu)
+# print(adjust_list)
+#
+# plt.scatter([i for i in range(1, 101)], adjust_list, marker='o')
+# plt.title('点光源905nm辐照度与功率比例关系')
+# plt.xlabel('点光源功率比例(%)')  # 横坐标标签
+# plt.ylabel('辐照度(W/m^2/nm)')  # 纵坐标标签
+# plt.show()
+#
+# ditc = {
+#     'light_rate(%)': [i for i in range(1, 101)],
+#     '辐照度':adjust_list
+# }
+#
+# pd.DataFrame(ditc).to_csv(r'C:\Users\wanghaibo\Downloads\artificial905.csv')

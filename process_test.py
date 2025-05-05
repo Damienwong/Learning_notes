@@ -6,7 +6,7 @@
 
 import multiprocessing as mp
 import time
-
+from rclpy.node import Node
 
 def process_1(process_alive,receive_start,data_queue):
 

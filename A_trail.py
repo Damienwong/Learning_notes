@@ -266,17 +266,7 @@ import time
 # plt.legend()
 # plt.show()
 
-import glob
 
-import pandas as pd
-
-csv_dirs = glob.glob(r'\\172.20.2.21\ft\TestData\ISO测评数据\20250416_ISO抗干扰\ATX-BYD-PR3301-0037\1.0m同向干扰\*.csv')
-dfs = []
-for csv_dir in csv_dirs:
-    df = pd.read_csv(csv_dir)
-    dfs.append(df)
-df_re = pd.concat(dfs)
-print(df_re)
-print(len(df_re))
-S = (120000 * 100 - len(df_re)) / (120000 * 100)
-print(S)
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()

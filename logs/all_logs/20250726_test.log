@@ -1,0 +1,187 @@
+2025-07-26 23:33:16 - test_20250726 - DEBUG - mylogger.py:70 - 这是一条调试信息。
+2025-07-26 23:34:33 - test_20250726 - DEBUG - mylogger.py:70 - 这是一条调试信息。
+2025-07-26 23:34:33 - test_20250726 - INFO - mylogger.py:73 - 这是 一条普通信息。
+2025-07-26 23:37:31 - test_20250726 - DEBUG - mylogger.py:70 - 这是一条调试信息。
+2025-07-26 23:37:31 - test_20250726 - INFO - mylogger.py:73 - 这是 一条普通信息。
+2025-07-26 23:37:31 - test_20250726 - WARNING - mylogger.py:76 - 这是一条警告信息。
+2025-07-26 23:37:31 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:37:31 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:39:46 - test_20250726 - DEBUG - mylogger.py:70 - 这是一条调试信息。
+2025-07-26 23:39:46 - test_20250726 - INFO - mylogger.py:73 - 这是 一条普通信息。
+2025-07-26 23:39:46 - test_20250726 - WARNING - mylogger.py:76 - 这是一条警告信息。
+2025-07-26 23:39:46 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:39:46 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:39:46 - test_20250726 - ERROR - mylogger.py:89 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:41:51 - test_20250726 - DEBUG - mylogger.py:70 - 这是一条调试信息。
+2025-07-26 23:41:51 - test_20250726 - INFO - mylogger.py:73 - 这是 一条普通信息。
+2025-07-26 23:41:51 - test_20250726 - WARNING - mylogger.py:76 - 这是一条警告信息。
+2025-07-26 23:41:51 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:41:51 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:41:51 - test_20250726 - ERROR - mylogger.py:89 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:41:51 - test_20250726 - ERROR - mylogger.py:79 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:41:57 - test_20250726 - DEBUG - mylogger.py:70 - 这是一条调试信息。
+2025-07-26 23:41:57 - test_20250726 - INFO - mylogger.py:73 - 这是 一条普通信息。
+2025-07-26 23:41:57 - test_20250726 - WARNING - mylogger.py:76 - 这是一条警告信息。
+2025-07-26 23:41:57 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:41:57 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:41:57 - test_20250726 - ERROR - mylogger.py:79 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:42:09 - test_20250726 - DEBUG - mylogger.py:70 - 这是一条调试信息。
+2025-07-26 23:42:09 - test_20250726 - INFO - mylogger.py:73 - 这是 一条普通信息。
+2025-07-26 23:42:09 - test_20250726 - WARNING - mylogger.py:76 - 这是一条警告信息。
+2025-07-26 23:42:09 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:42:09 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:42:09 - test_20250726 - ERROR - mylogger.py:79 - 发生了一个除零异常
+2025-07-26 23:43:21 - test_20250726 - DEBUG - mylogger.py:70 - 这是一条调试信息。
+2025-07-26 23:43:21 - test_20250726 - INFO - mylogger.py:73 - 这是 一条普通信息。
+2025-07-26 23:43:21 - test_20250726 - WARNING - mylogger.py:76 - 这是一条警告信息。
+2025-07-26 23:43:21 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:43:21 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:43:21 - test_20250726 - ERROR - mylogger.py:79 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:44:59 - test_20250726 - DEBUG - mylogger.py:70 - 这是一条调试信息。
+2025-07-26 23:44:59 - test_20250726 - INFO - mylogger.py:73 - 这是 一条普通信息。
+2025-07-26 23:44:59 - test_20250726 - WARNING - mylogger.py:76 - 这是一条警告信息。
+2025-07-26 23:44:59 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:44:59 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:44:59 - test_20250726 - ERROR - mylogger.py:79 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:44:59 - test_20250726 - INFO - mylogger.py:98 - 使用通用方法记录的信息
+2025-07-26 23:48:37 - test_20250726 - DEBUG - mylogger.py:70 - 这是一条调试信息。
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 这是 一条普通信息。
+2025-07-26 23:48:37 - test_20250726 - WARNING - mylogger.py:76 - 这是一条警告信息。
+2025-07-26 23:48:37 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:48:37 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:48:37 - test_20250726 - ERROR - mylogger.py:79 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:98 - 使用通用方法记录的信息
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：0%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：1%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：2%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：3%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：4%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：5%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：6%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：7%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：8%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：9%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：10%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：11%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：12%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：13%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：14%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：15%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：16%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：17%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：18%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：19%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：20%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：21%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：22%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：23%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：24%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：25%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：26%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：27%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：28%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：29%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：30%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：31%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：32%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：33%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：34%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：35%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：36%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：37%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：38%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：39%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：40%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：41%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：42%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：43%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：44%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：45%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：46%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：47%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：48%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：49%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：50%
+2025-07-26 23:48:37 - test_20250726 - WARNING - mylogger.py:76 - 任务进度过半
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：51%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：52%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：53%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：54%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：55%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：56%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：57%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：58%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：59%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：60%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：61%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：62%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：63%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：64%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：65%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：66%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：67%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：68%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：69%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：70%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：71%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：72%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：73%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：74%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：75%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：76%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：77%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：78%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：79%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：80%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：81%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：82%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：83%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：84%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：85%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：86%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：87%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：88%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：89%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：90%
+2025-07-26 23:48:37 - test_20250726 - ERROR - mylogger.py:89 - 文件操作失败
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 145, in <module>
+    open('somthing.txt')
+FileNotFoundError: [Errno 2] No such file or directory: 'somthing.txt'
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：91%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：92%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：93%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：94%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：95%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：96%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：97%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：98%
+2025-07-26 23:48:37 - test_20250726 - INFO - mylogger.py:73 - 任务进度：99%

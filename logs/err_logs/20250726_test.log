@@ -1,0 +1,57 @@
+2025-07-26 23:37:31 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:37:31 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:39:46 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:39:46 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:39:46 - test_20250726 - ERROR - mylogger.py:89 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:41:51 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:41:51 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:41:51 - test_20250726 - ERROR - mylogger.py:89 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:41:51 - test_20250726 - ERROR - mylogger.py:79 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:41:57 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:41:57 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:41:57 - test_20250726 - ERROR - mylogger.py:79 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:42:09 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:42:09 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:42:09 - test_20250726 - ERROR - mylogger.py:79 - 发生了一个除零异常
+2025-07-26 23:43:21 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:43:21 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:43:21 - test_20250726 - ERROR - mylogger.py:79 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:44:59 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:44:59 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:44:59 - test_20250726 - ERROR - mylogger.py:79 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:48:37 - test_20250726 - ERROR - mylogger.py:79 - 这是一条错误信息
+2025-07-26 23:48:37 - test_20250726 - CRITICAL - mylogger.py:82 - 这是一条严重错误信息
+2025-07-26 23:48:37 - test_20250726 - ERROR - mylogger.py:79 - 发生了一个除零异常
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 127, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+2025-07-26 23:48:37 - test_20250726 - ERROR - mylogger.py:89 - 文件操作失败
+Traceback (most recent call last):
+  File "E:\Codes\PycharmProjects\Learning_notes\logs\mylogger.py", line 145, in <module>
+    open('somthing.txt')
+FileNotFoundError: [Errno 2] No such file or directory: 'somthing.txt'

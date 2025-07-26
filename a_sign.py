@@ -6,5 +6,15 @@
 @Description: 
 """
 
-if __name__ == '__main__':
-    print('Python')
+
+def a_fun():
+    """
+    learning something
+    :rtype: int
+    :param a:
+    :param d:
+    """
+    print("we are in {}".format(__name__))
+    if __name__ == "__main__":
+        print('Yes')
+

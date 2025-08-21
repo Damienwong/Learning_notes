@@ -1,1 +1,8 @@
 .ipynb_checkpoints
+# Ignore all files in the .idea directory
+.idea/*
+
+# But track specific configuration files
+!.idea/misc.xml
+!.idea/modules.xml
+!.idea/vcs.xml

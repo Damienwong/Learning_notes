@@ -1,0 +1,11 @@
+# 多个配置文档
+---
+common:
+  log_level: INFO
+  timeout: 30
+---
+development:
+  debug: true
+---
+production:
+  debug: false

@@ -1,0 +1,18 @@
+{
+    "application": {
+        "name": "My Python App",
+        "version": "1.4.0",
+        "debug": false,
+        "max_threads": 8
+    },
+    "database": {
+        "host": "db.example.com",
+        "port": 5432,
+        "username": "admin"
+    },
+    "features": [
+        "authentication",
+        "notifications",
+        "analytics"
+    ]
+}
